@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bayora SOC — Secure AI Safety Infrastructure (Ridgeline v2)</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Fullscreen Topographic Contour Background (A13 Drift) -->
+  <svg id="topo-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+    <pattern id="contour-pattern" width="900" height="900" patternUnits="userSpaceOnUse">
+      <!-- 6-8 Organic Concentric Wavy Contour Paths -->
+      <path d="M 50 150 Q 200 80 450 160 T 850 140" stroke="rgba(236,231,218,0.045)" stroke-width="1" fill="none"/>
+      <path d="M 30 300 C 180 220 380 340 600 280 T 880 320" stroke="rgba(236,231,218,0.045)" stroke-width="1" fill="none"/>
+      <path d="M 80 450 C 250 380 420 500 680 430 T 820 480" stroke="rgba(236,231,218,0.045)" stroke-width="1" fill="none"/>
+      <path d="M 20 600 Q 240 520 480 640 T 870 590" stroke="rgba(236,231,218,0.045)" stroke-width="1" fill="none"/>
+      <path d="M 60 750 C 220 680 400 810 650 720 T 890 780" stroke="rgba(236,231,218,0.045)" stroke-width="1" fill="none"/>
+      
+      <!-- Concentric Ridge Rings -->
+      <ellipse cx="450" cy="450" rx="380" ry="260" stroke="rgba(236,231,218,0.03)" stroke-width="1" fill="none"/>
+      <ellipse cx="450" cy="450" rx="280" ry="180" stroke="rgba(236,231,218,0.03)" stroke-width="1" fill="none"/>
+      <ellipse cx="450" cy="450" rx="160" ry="100" stroke="rgba(236,231,218,0.03)" stroke-width="1" fill="none"/>
+    </pattern>
+    <rect width="100%" height="200%" fill="url(#contour-pattern)"/>
+  </svg>
+
+  <!-- Film Grain Overlay -->
+  <div id="grain-overlay"></div>
+
+  <!-- App Shell -->
+  <div id="app-shell">
+    <!-- Top Bar (56px) -->
+    <header id="top-bar"></header>
+
+    <!-- Main Container -->
+    <div id="main-container">
+      <!-- Left Rail Navigation -->
+      <nav id="left-rail"></nav>
+
+      <!-- Main Scrollable Content -->
+      <main id="main-content"></main>
+    </div>
+
+    <!-- Mountain Ridge Silhouette (Bottom of App Shell) -->
+    <svg id="ridge-silhouette" viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 120 L0 85 L120 50 L240 90 L380 30 L520 80 L680 20 L840 75 L980 40 L1120 80 L1200 60 L1200 120 Z" fill="#0E1411"/>
+      <path d="M0 120 L0 95 L180 65 L320 100 L460 55 L620 90 L780 45 L920 85 L1060 50 L1200 75 L1200 120 Z" fill="#090D0B" opacity="0.5"/>
+    </svg>
+
+    <!-- Bottom Status Strip (28px) -->
+    <footer id="status-strip"></footer>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/config.js"></script>
+  <script src="js/crypto.js"></script>
+  <script src="js/socket.js"></script>
+  <script src="js/components/navigation.js"></script>
+  <script src="js/components/overview.js"></script>
+  <script src="js/components/isolationMap.js"></script>
+  <script src="js/components/telemetry.js"></script>
+  <script src="js/components/auditLedger.js"></script>
+  <script src="js/components/riskMatrix.js"></script>
+  <script src="js/components/threatModel.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
